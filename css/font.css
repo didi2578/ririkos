@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+@font-face {
+    font-family:'AritaSans';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/aritaSans/AritaSans-Thin.otf');
+  }
+
+@font-face {
+    font-family:'AritaSans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/aritaSans/AritaSans-Light.otf');
+}
+
+@font-face {
+    font-family:'AritaSans';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/aritaSans/AritaSans-Medium.otf');
+}
+
+@font-face {
+    font-family:'AritaSans';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/aritaSans/AritaSans-SemiBold.otf');
+}
+
+body{
+  font-family: 'AritaSans', sans-serif;
+}
+h2{
+  font-size: 52px;
+  font-weight: 300;
+  letter-spacing: 11px;
+  color: #222;
+}
+h3{
+      font-size: 24px;
+    font-weight: 500;
+    line-height: 1.34;
+    letter-spacing: 1.5px;
+    color: #222;
+}
+p{
+  
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  line-height: 1.63;
+}
+b{
+  font-size: 29px;
+  font-weight: 400;
+  line-height: 1.33;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}

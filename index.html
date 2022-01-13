@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LILIKOS</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/hamcss.css">
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/title.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/response.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@300&display=swap" rel="stylesheet">
+  <!-- css----------------- -->
+  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+  <script type="text/javascript" src="js/jquery-3.6.0.js"></script>
+  <script src="js/index.js"></script>
+  <!-- js---------------------------------- -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- AOS----------------------- -->
+  <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+    href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!-- slick------------------ -->
+
+
+  <script type="text/javascript">
+    $().ready(function () {
+
+
+      var gnbH = $(window).height();
+      $("header .gnb_section").css("height", gnbH);
+      $(window).resize(function () {
+        gnbH = $(window).height();
+        $("header .gnb_section").css("height", gnbH);
+      });
+
+      $('.fade').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear'
+      });
+      $('.titleFade').slick({
+        dots: true,
+        infinite: true,
+        speed: 1000,
+        fade: true,
+        autoplay: true,
+        autoplayspeed: 5000,
+        cssEase: 'linear'
+      });
+
+      $('.gnbFade').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        autoplay: true,
+        autoplayspeed: 4000,
+        cssEase: 'linear'
+      });
+
+
+      // 타이틀 이미지 갯수 표시
+      let n = $('#title ul li.slick-slide').length;
+      $('#title .slick-dots').append(`<span class="sum"></span>`);
+      $('#title .slick-dots .sum').text(n);
+
+      // 타이틀 하단 애니메이션
+      $('#title ul.titleFade').addClass('perAni');
+
+
+      // experience 이미지 갯수표시
+      let j = $('#experience ul li.slick-slide').length;
+      $('#experience .slick-dots').append(`<span class="sum"></span>`);
+      $('#experience .slick-dots .sum').text(j);
+
+
+
+      // ham 버튼 클릭시 gnb 보이게
+      $('.header_menu_btn').click(function (e) {
+        e.preventDefault();
+        $(this).toggleClass('active');
+        $('.gnb_section').toggleClass('on');
+
+      });
+
+
+      AOS.init();
+    });
+  </script>
+</head>
+
+<body>
+  <header>
+    <hgroup>
+      <h1><a href="">LIRIKOS</a></h1>
+      <h2>MARINE ENERGY</h2>
+    </hgroup>
+    <span>
+      <a href="" class="search">검색</a>
+      <a href="" class="header_menu_btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </span>
+    <div class="gnb_section">
+      <div class="gnb_section_inner">
+        <nav class="gnb_left">
+          <ul class="gnb_left_inner">
+            <li>
+              <b>PRODUCTS</b>
+              <ul class="left_innerUl">
+                <li><a href="">WHAT′S NEW</a></li>
+                <li><a href="">BY CATEGORY</a>
+                  <div class="leftAside">
+                    <P>BY CATEGORY</P>
+                    <ul>
+                      <li><a href="">VIEW ALL</a></li>
+                      <li><a href="">CLENANSER</a></li>
+                      <li><a href="">TONER&EMULSION</a></li>
+                      <li><a href="">SERUM</a></li>
+                      <li><a href="">EYE & CREAM</a></li>
+                      <li><a href="">MASK & PACK</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="">BY LINE</a></li>
+              </ul>
+            </li>
+            <li>
+              <b>BRAND</b>
+              <ul class="left_innerUl">
+                <li><a href="">BRAND STORY</a></li>
+                <li><a href="">INGREDIENTS</a></li>
+                <li><a href="">DESIGN STORY & SCENT</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="sns">
+            <li><a href="">
+                <ion-icon name="logo-facebook"></ion-icon><span class="indent">facebook</span>
+              </a></li>
+            <li><a href="">
+                <ion-icon name="logo-instagram"></ion-icon><span class="indent">instagram</span>
+              </a></li>
+          </ul>
+        </nav>
+        <div class="gnb_right">
+          <p class="close">close</p>
+          <ul class="gnbFade">
+            <li>
+              <img src="images/GNB_products-banners_01_facial-eraser-cleansing-oil-foam.jpg" alt="">
+              <div class="gnbtxt">
+                <b>FACIAL ERASER<br>
+                  CLEANSING OIL FOAM</b>
+                <p>All-in-one cleansing oil form changes<br>
+                  from oil to foam, from remover to cleanser</p>
+                <a href="">Discover More</a>
+              </div>
+            </li>
+            <li>
+              <img src="images/GNB_products-banners_02_true-ampoule-mask.jpg" alt="">
+              <div class="gnbtxt">
+                <b>TRUE AMPOULE<br>
+                  MASK</b>
+                <p>Daily ampule mask for skin problems</p>
+                <a href="">Discover More</a>
+              </div>
+            </li>
+            <li>
+              <img src="images/GNB_products-banners_03_deep-sea-waterfall-cream.jpg" alt="">
+              <div class="gnbtxt">
+                <b>DEEP SEA<br>
+                  WATERFALL CREAM</b>
+                <p>Deep Sea Waterfall Cream, such as water ions<br>
+                  that will quench my skin's thirs</p>
+                <a href="">Discover More</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- title section------------------------------------- -->
+  <section id="title">
+    <div class="w1000">
+      <ul class="titleFade">
+        <li>
+          <h2>BALANCING<br>
+            EMULSION<br>
+            with DEEP SEA SALT</h2>
+          <p>The water splashing emulsion that quickly absorbs on the skin with smooth texture.
+          </p>
+          <a href="" class="discover">
+            <span>Discover more</span>
+            <span class="arrow">
+              <svg id="arrowsvg" xmlns="http://www.w3.org/2000/svg" width="120px" height="16px" viewBox="0 0 120 16">
+                <g>
+                  <line x1="0" y1="8" x2="40" y2="8" stroke-width="1" stroke="#007a88" />
+                  <line x1="40" y1="8" x2="60" y2="8" stroke-width="1" stroke="#fff" />
+                  <line x1="55" y1="4" x2="60" y2="8" stroke-width="1" stroke="#fff" />
+                  <line x1="55" y1="12" x2="60" y2="8" stroke-width="1" stroke="#fff" />
+
+                </g>
+              </svg>
+            </span>
+          </a>
+        </li>
+        <li>
+          <h2>TRUE AMPOULE<br>
+            MASK
+          </h2>
+          <p>Daily skin care with sheet mask depending on your skin condition</p>
+          <a href="" class="discover">
+            <span>Discover more</span>
+            <span class="arrow">
+              <svg id="arrowsvg" xmlns="http://www.w3.org/2000/svg" width="120px" height="16px" viewBox="0 0 120 16">
+                <g>
+                  <line x1="0" y1="8" x2="40" y2="8" stroke-width="1" stroke="#007a88" />
+                  <line x1="40" y1="8" x2="60" y2="8" stroke-width="1" stroke="#fff" />
+                  <line x1="55" y1="4" x2="60" y2="8" stroke-width="1" stroke="#fff" />
+                  <line x1="55" y1="12" x2="60" y2="8" stroke-width="1" stroke="#fff" />
+
+                </g>
+              </svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+  <section id="bestseller">
+    <div class="bestseller_inner">
+      <h2>BEST SELLERS</h2>
+      <ul>
+        <li data-aos="fade-up">
+          <a href="">
+            <img src="images/facial-eraser-cleansing-foam_1.jpg" alt="">
+            <b>FACIAL ERASER CLEANSING
+              FOAM</b>
+          </a>
+        </li>
+        <li data-aos="fade-up">
+          <a href="">
+            <img src="images/deep-sea-waterfall-toner_1.jpg" alt="">
+            <b>DEEP SEA WATERFALL TONER</b>
+          </a>
+        </li>
+        <li data-aos="fade-up">
+          <a href="">
+            <img src="images/facial-eraser-cleansing-oil-foam_1.jpg" alt="">
+            <b>FACIAL ERASER CLEANSING OIL
+              FOAM</b>
+          </a>
+        </li>
+        <li data-aos="fade-up">
+          <a href="">
+            <img src="images/true-ampoule-mask_1.jpg" alt="">
+            <b>TRUE AMPOULE MASK</b>
+          </a>
+        </li>
+        <li data-aos="fade-up">
+          <a href="">
+            <img src="images/3-minute-clay-mask_1.jpg" alt="">
+            <b>3-MINUTE CLAY MASK</b>
+          </a>
+        </li>
+        <li data-aos="fade-up">
+          <a href="">
+            <img src="images/deep-sea-waterfall-cream_1.jpg" alt="">
+            <b>DEEP SEA WATERFALL CREAM</b>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="circle">
+      <a href="">Discover more</a>
+        <div class="wave"></div>
+    </div>
+  </section>
+
+
+  <section id="brandstory">
+    <h2 data-bottom-top="right: -20%;" data-top-bottom="right: 20%;" data-smooth-scrolling="off">brand story</h2>
+    <div class="brandInner">
+      <div class="brand_screen">
+        <video preload="none" autoplay loop muted controls>
+          <source src="images/video/main-brand.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="brandTxt_container">
+        <ul>
+          <li class="brand_txt txt">
+            <b>MARINE ENERGY HAS BEGUN FROM
+              <br>THE SECRET OF THE MARINE PLANTS.</b>
+            <p>Even if seaweeds are rubbed by rough waves hither and thither, they are damaged but they remain moist
+              and
+              elastic.
+              <br>“Wouldn’t it be great if we can deliver this surprising energy of marine plants into the skin in its
+              entirety?”
+              <br>Thus begun LIRIKOS Marine Energy’s research on the powers of algae.</p>
+            <a href="" class="discover brand">
+              <span>Discover more</span>
+              <span class="arrow">
+                <svg id="arrowsvg" xmlns="http://www.w3.org/2000/svg" width="120px" height="16px" viewBox="0 0 120 16">
+                  <g>
+                    <line x1="0" y1="8" x2="60" y2="8" stroke-width="1" stroke="#fff" />
+                    <line x1="55" y1="4" x2="60" y2="8" stroke-width="1" stroke="#fff" />
+                    <line x1="55" y1="12" x2="60" y2="8" stroke-width="1" stroke="#fff" />
+
+                  </g>
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li class="brand_txt txt">
+            <b>THE SECRET OF MARINE ENERGY</b>
+            <p>The source of vitality contained in marine plant is a fermented seaweed component
+              <br>created from the symbiosis between seaweed and microorganisms.
+              <br>It enhances the skin's strength based on moisture, skin stress relief and skin barrier enhancement
+              effects.
+              <br>Lirikos's long hours of study to extract and optimize this component on human skin has come to
+              fruition.
+            </p>
+            <a href="" class="discover">
+              <span>Discover more</span>
+              <span class="arrow">
+                <svg id="arrowsvg" xmlns="http://www.w3.org/2000/svg" width="120px" height="16px" viewBox="0 0 120 16">
+                  <g>
+                    <line x1="0" y1="8" x2="40" y2="8" stroke-width="1" stroke="#007a88" />
+                    <line x1="40" y1="8" x2="60" y2="8" stroke-width="1" stroke="#fff" />
+                    <line x1="55" y1="4" x2="60" y2="8" stroke-width="1" stroke="#fff" />
+                    <line x1="55" y1="12" x2="60" y2="8" stroke-width="1" stroke="#fff" />
+                  </g>
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li class="brand_txt txt">
+            <b>MARINE LAB</b>
+            <p>Marine Lab has put in advanced technology and long-term efforts in order
+              <br>to discover the source of algae’s strong vitality and how to return the skin to its optimal state.
+            </p>
+            <a href="" class="discover">
+              <span>Discover more</span>
+              <span class="arrow">
+                <svg id="arrowsvg" xmlns="http://www.w3.org/2000/svg" width="120px" height="16px" viewBox="0 0 120 16">
+                  <g>
+                    <line x1="0" y1="8" x2="40" y2="8" stroke-width="1" stroke="#007a88" />
+                    <line x1="40" y1="8" x2="60" y2="8" stroke-width="1" stroke="#fff" />
+                    <line x1="55" y1="4" x2="60" y2="8" stroke-width="1" stroke="#fff" />
+                    <line x1="55" y1="12" x2="60" y2="8" stroke-width="1" stroke="#fff" />
+                  </g>
+                </svg>
+              </span>
+            </a>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="designstory">
+    <div class="designInner">
+      <div class="scent">
+        <a href="">
+          <img src="images/main-material-design.png" alt="">
+          <div class="ani_txt">
+            <h2>DESIGN STORY & SCENT</h2>
+            <p>
+              Feel the ocean with your eyes, <br />
+              the fragrance,and your heart
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class=" ingridient">
+        <a href="">
+          <img src="images/main-material-ingredients.png" alt="">
+          <div class="ani_txt">
+            <h2>INGREDIENTS</h2>
+            <p>
+              Find out the hidden infinite <br />
+              possibilities of the ocean
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="bubbles">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+      </div>
+    </div>
+    </div>
+    <div class="designstoryImageInner">
+      <div class="main-experience-layer-01"></div>
+      <div class="main-experience-layer-02"></div>
+      <div class="main-material-layer"></div>
+    </div>
+
+  </section>
+
+
+  <section id="experience">
+    <div class="wrap">
+      <h2>
+        EXPERIENCE<br>
+        <span>LIRIKOS <br>MARINE ENERGY</span></h2>
+      <ul class="fade">
+        <li>
+          <figure>
+            <img src="images/true-ampoule-mask_1.jpg" alt="">
+          </figure>
+          <div class="ex_txt txt">
+            <div class="exinner">
+              <h3>TRUE AMPOULE MASK</h3>
+              <p>my skin is getting better after using this
+                mask.It made my skin feel hydrated and smooth.
+                Better make-up after this.</p>
+            </div>
+            <a href="" class="discover">
+              <span>Discover more</span>
+              <span class="arrow">
+                <svg id="arrowsvg" xmlns="http://www.w3.org/2000/svg" width="120px" height="16px" viewBox="0 0 120 16">
+                  <g>
+                    <line x1="0" y1="8" x2="40" y2="8" stroke-width="1" stroke="#007a88" />
+                    <line x1="40" y1="8" x2="60" y2="8" stroke-width="1" stroke="#fff" />
+                    <line x1="55" y1="4" x2="60" y2="8" stroke-width="1" stroke="#fff" />
+                    <line x1="55" y1="12" x2="60" y2="8" stroke-width="1" stroke="#fff" />
+
+                  </g>
+                </svg>
+              </span>
+            </a>
+        </li>
+        <li>
+          <figure>
+            <img src="images/deep-sea-waterfall-toner_1.jpg" alt="">
+          </figure>
+          <div class="ex_txt txt">
+            <div class="exinner">
+              <h3>DEEP SEA WATERFALL TONER</h3>
+              <p>I've already bought it several times.
+                It's moist and mild, and good enough
+                to recommend to others.
+                Both oily and dry skin can use it.</p>
+            </div>
+            <a href="" class="discover">
+              <span>Discover more</span>
+              <span class="arrow">
+                <svg id="arrowsvg" xmlns="http://www.w3.org/2000/svg" width="120px" height="16px" viewBox="0 0 120 16">
+                  <g>
+                    <line x1="0" y1="8" x2="40" y2="8" stroke-width="1" stroke="#007a88" />
+                    <line x1="40" y1="8" x2="60" y2="8" stroke-width="1" stroke="#fff" />
+                    <line x1="55" y1="4" x2="60" y2="8" stroke-width="1" stroke="#fff" />
+                    <line x1="55" y1="12" x2="60" y2="8" stroke-width="1" stroke="#fff" />
+
+                  </g>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li>
+          <figure>
+            <img src="images/facial-eraser-cleansing-oil-foam_1.jpg" alt="">
+          </figure>
+          <div class="ex_txt txt">
+            <div class="exinner">
+              <h3>FACIAL ERASER
+                <br />CLEANSING OIL FOAM</h3>
+              <p>Its sample was so good that's why I purchased it.
+                Cleansing oil and cleansing foam function
+                at the same time makes it
+                really comfortable and good.</p>
+            </div>
+            <a href="" class="discover">
+              <span>Discover more</span>
+              <span class="arrow">
+                <svg id="arrowsvg" xmlns="http://www.w3.org/2000/svg" width="120px" height="16px" viewBox="0 0 120 16">
+                  <g>
+                    <line x1="0" y1="8" x2="40" y2="8" stroke-width="1" stroke="#007a88" />
+                    <line x1="40" y1="8" x2="60" y2="8" stroke-width="1" stroke="#fff" />
+                    <line x1="55" y1="4" x2="60" y2="8" stroke-width="1" stroke="#fff" />
+                    <line x1="55" y1="12" x2="60" y2="8" stroke-width="1" stroke="#fff" />
+                  </g>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="footerIlluer01"></div>
+    <div class="footerIlluer02"></div>
+    <div class="footerInner">
+      <div class="top">
+        <ul class="navigator">
+          <li><a href="">About us</a></li>
+          <li><a href="">Terms and Conditions</a></li>
+          <li><a href="">Sitemap </a></li>
+        </ul>
+        <ul class="sns">
+          <li><a href="">
+              <ion-icon name="logo-facebook"></ion-icon><span class="indent">facebook</span>
+            </a></li>
+          <li><a href="">
+              <ion-icon name="logo-instagram"></ion-icon><span class="indent">instagram</span>
+            </a></li>
+        </ul>
+      </div>
+      <div class="bottom">
+        <small class="copyright">© AMOREPACIFIC CORPORATION. All rights reserved.</small>
+        <select name="" id="">
+          <option value="">ENG</option>
+          <option value="">KOR</option>
+        </select>
+      </div>
+    </div>
+  </footer>
+  <script src="js/skrollr.js"></script>
+  <script>
+    $(document).ready(function () {
+      var s = skrollr.init({
+        forceHeight: false
+      });
+
+    });
+  </script>
+</body>
+
+</html>
